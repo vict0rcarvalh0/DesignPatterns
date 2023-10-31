@@ -1,4 +1,4 @@
-# DesignPatterns
+# Design Patterns
 Repositório para registrar meus estudos de POO e Design Patterns
 
 ## Conceitos da POO
