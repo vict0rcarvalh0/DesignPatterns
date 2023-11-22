@@ -1,6 +1,6 @@
 import sqlite3
 
-def _execute(query):
+def _execute(query, params=None):
     db_path = "./db.mvc"
 
     # Conectando ao banco de dados
@@ -11,16 +11,21 @@ def _execute(query):
     result = None
 
     try:
-        # Executando o comando no banco de dados
-        cursor.execute(query)
-
-        # Pegar todos os dados -> Lista de tuplas
-        result = cursor.fetchall()
+        #Executando o comando no banco de dados
+        if params:
+            cursor.execute(query, params)
+        else:
+            cursor.execute(query)
 
         # Commitando as mudanças
         connection.commit()
+
+        # Pegar todos os dados -> Lista de tuplas
+        result = cursor.fetchall()
     except Exception as err:
         print(f"Erro ao executar a query: {err}")
+
+    connection.close()
     
     return result
 

@@ -21,13 +21,13 @@ class Product:
     
     # Método para atualizar o status de um produto
     def update(self):
-        query = "UPDATE products SET status={int(self.status)} WHERE id={int(self.id)}"
-        _execute(query)
+        query = "UPDATE products SET status = ? WHERE id = ?"
+        _execute(query, (self.status, self.id,))
 
     # Método para deletar um objeto(produto)
     def delete(self):
-        query = "DELETE FROM products WHERE id={int(self.id)}"
-        _execute(query)
+        query = "DELETE FROM products WHERE id = ?"
+        _execute(query, (self.id,))
     
     # Método estático para dar um get all nos produtos
     @staticmethod

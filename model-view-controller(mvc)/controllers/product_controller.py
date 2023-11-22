@@ -31,7 +31,7 @@ class Update(RequestHandler):
 
     # Método para apresentar o formulário de edição de produtos
     def get(self, id, status):
-        product = Product.get_product(id)
+        product = Product.get_product_by_id(id)
         product.status = status
         product.update()
 
@@ -42,7 +42,7 @@ class Delete(RequestHandler):
 
     # Método para apresentar o formulário de exclusão de produtos
     def get(self, id):
-        product = Product.get_product(id)
+        product = Product.get_product_by_id(id)
         product.delete()
 
         self.redirect('/')

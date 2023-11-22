@@ -31,7 +31,7 @@
                     {% else %}
                         <td><a class="btn btn-success" href="/product/update/{{ product[0] }}/status/1">Activate</a></td>
                     {% end %}
-                    <td><a class="btn btn-danger" href="/product/delete/{{ product[0] }}/status/1">Delete</a></td>
+                    <td><a class="btn btn-danger" href="/product/delete/{{ product[0] }}">Delete</a></td>
                 </tr>
             {% end %}
         </table>
@@ -42,4 +42,3 @@
         <h3><a class="btn btn-primary" href="/product/new">Add Product</a></h3>
     </div>
 {% end %}
-```

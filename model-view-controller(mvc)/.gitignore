@@ -1,1 +1,5 @@
 venv
+db.mvc
+__pycache__/database.cpython-310.pyc
+controllers/__pycache__/product_controller.cpython-310.pyc
+models/__pycache__/product_model.cpython-310.pyc
