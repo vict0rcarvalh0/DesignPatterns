@@ -46,35 +46,35 @@ Repositório para registrar meus estudos de POO e Design Patterns
   - Em vez de herdar características de uma classe pai, a composição permite que uma classe contenha outras classes como atributos
   - Isso promove a reutilização de código e evita os problemas de acoplamento excessivo que podem surgir com herança
 
-## Princípios do Design de Software Orientado a Objetos
-1. Princípio do aberto/fechado
-  - Determina que classes ou métodos devem estar abertos para extensão e fechados para modificações
-  - Ou seja, a escrita das classes e métodos devem ser genéricas, de modo que sempre que sentir necessidade de estender o comportamento, não precisaria alterar a classe propriamente dita
-  - "Uma extensão simples da classe deverá ajudar a implementar o novo comportamento"
-  - Exemplo: Suponha que você tenha uma classe Calculadora com métodos para adição e subtração. Em vez de modificar a classe Calculadora toda vez que você quiser adicionar uma nova operação, você pode criar uma nova classe que estende Calculadora e adiciona a nova operação, mantendo a classe original inalterada.
-  
-2. Princípio da inversão de controle
-  - Determina que módulos de alto nível não devem ser dependentes de módulos de baixo nível, pois ambos devem ser dependentes de abstrações
-  - Ou seja, os módulos devem ser interdependentes, de forma que a complexidade/rigidez do sistema diminui efica mais fácil de lidar com dependências enter módulos
-  - "Módulos devem ser desacoplados com uma camada de abstração entre eles"
-  - Exemplo: Em vez de uma classe Motor depender diretamente de uma classe Carro, ela deve depender de uma interface Veiculo. Isso permite que diferentes tipos de veículos (carros, motos, caminhões) sejam facilmente integrados sem alterar o código do motor.
-
-3. Princípio da segregação de interfaces
-  - Determina que clientes não devem ser forçados a depender de interfaces que não o utilizam
-  - Ou seja, boas interfaces são criadas escrevendo apenas métodos relacionados à funcionalidade para que não exista nenhum método não relacionado a interface, evitando que a classe dependente da interface tenha que implementá-lo desnecesariamente
-  - "Força os desenvolvedores a escrever interfaces enxutas, sem métodos indesejados ou específicos demais"
-  - Exemplo: uma interface Pizza não deveria ter um método chamado adiciona_frango() pois a classe PizzaVegana não deveria ser forçada a implementar este método.
-
-4. Princípio da responsabilidade única
+## Princípios do Design de Software Orientado a Objetos - SOLID
+1. Princípio da responsabilidade única(**S**ingle Responsability Principle)
   - Determina que uma classe deve ter apenas um motivo para mudar, logo, se uma classe estiver tratando de mais de uma funcionalidade, é melhor dividí-la
   - Ou seja, quando desenvolvemos uma classe, ela deve tomar conta apenas de sua funcionalidade em particular
   - Por se referir à funcionalidade como motivo para mudança, traz a vantagem de tornar as classes mais objetivas
   - Exemplo: Uma classe GestorDeArquivos deve ser responsável apenas pela manipulação de arquivos, não deve incluir lógica de validação ou cálculos. Se a validação for necessária, deve ser tratada por outra classe separada.
 
-5. Princípio da substituição
+2. Princípio do aberto/fechado(**O**pen-Closed Principle)
+  - Determina que classes ou métodos devem estar abertos para extensão e fechados para modificações
+  - Ou seja, a escrita das classes e métodos devem ser genéricas, de modo que sempre que sentir necessidade de estender o comportamento, não precisaria alterar a classe propriamente dita
+  - "Uma extensão simples da classe deverá ajudar a implementar o novo comportamento"
+  - Exemplo: Suponha que você tenha uma classe Calculadora com métodos para adição e subtração. Em vez de modificar a classe Calculadora toda vez que você quiser adicionar uma nova operação, você pode criar uma nova classe que estende Calculadora e adiciona a nova operação, mantendo a classe original inalterada.
+  
+3. Princípio da substituição de Liskov(**L**iskov Substitution Principle)
   - Determina que as classes derivadas devem ser capazes de substituir totalmente as classes pai
   - Ou seja, sugere que a classe derivada deve estar o mais próximo possível da classepai de modo que a classe derivada possa substituir a classe-pai sem qualquer modificação no código
   - Exemplo: Se você tem uma classe base Forma e classes derivadas como Circulo e Quadrado, a instância de qualquer subclasse deve poder substituir uma instância de Forma sem causar erros lógicos. Por exemplo, você deve poder tratar todos os tipos de formas da mesma maneira ao calcular áreas.
+  
+4. Princípio da segregação de interface(**I**nterface Segregation Principle)
+  - Determina que clientes não devem ser forçados a depender de interfaces que não o utilizam
+  - Ou seja, boas interfaces são criadas escrevendo apenas métodos relacionados à funcionalidade para que não exista nenhum método não relacionado a interface, evitando que a classe dependente da interface tenha que implementá-lo desnecesariamente
+  - "Força os desenvolvedores a escrever interfaces enxutas, sem métodos indesejados ou específicos demais"
+  - Exemplo: uma interface Pizza não deveria ter um método chamado adiciona_frango() pois a classe PizzaVegana não deveria ser forçada a implementar este método.
+
+5. Princípio da inversão de dependência(**D**ependency Inversion Principle)
+  - Determina que módulos de alto nível não devem ser dependentes de módulos de baixo nível, pois ambos devem ser dependentes de abstrações
+  - Ou seja, os módulos devem ser interdependentes, de forma que a complexidade/rigidez do sistema diminui efica mais fácil de lidar com dependências enter módulos
+  - "Módulos devem ser desacoplados com uma camada de abstração entre eles"
+  - Exemplo: Em vez de uma classe Motor depender diretamente de uma classe Carro, ela deve depender de uma interface Veiculo. Isso permite que diferentes tipos de veículos (carros, motos, caminhões) sejam facilmente integrados sem alterar o código do motor.
 
 ## Classificação dos Padrões de Projeto(Design Patterns)
 - <a href="https://github.com/vict0rcarvalh0/DesignPatterns/blob/main/patterns/creational-patterns/CREATIONAL.md">Padrões Criacionais</a>
