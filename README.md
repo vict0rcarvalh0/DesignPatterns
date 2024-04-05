@@ -77,6 +77,6 @@ Repositório para registrar meus estudos de POO e Design Patterns
   - Exemplo: Se você tem uma classe base Forma e classes derivadas como Circulo e Quadrado, a instância de qualquer subclasse deve poder substituir uma instância de Forma sem causar erros lógicos. Por exemplo, você deve poder tratar todos os tipos de formas da mesma maneira ao calcular áreas.
 
 ## Classificação dos Padrões de Projeto(Design Patterns)
-- Padrões Criacionais
-- Padrões Estruturais
-- Padrões Comportamentais
+- <a href="https://github.com/vict0rcarvalh0/DesignPatterns/blob/main/patterns/creational-patterns/CREATIONAL.md">Padrões Criacionais</a>
+- <a href="https://github.com/vict0rcarvalh0/DesignPatterns/blob/main/patterns/structural-patterns/STRUCTURAL.md">Padrões Estruturais</a>
+- <a href="https://github.com/vict0rcarvalh0/DesignPatterns/blob/main/patterns/behavioral-patterns/BEHAVIORAL.md">Padrões Comportamentais</a>
